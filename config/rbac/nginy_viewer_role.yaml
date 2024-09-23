@@ -1,0 +1,23 @@
+# permissions for end users to view nginies.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: nginy-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: nginy-viewer-role
+rules:
+- apiGroups:
+  - demo.example.com
+  resources:
+  - nginies
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - demo.example.com
+  resources:
+  - nginies/status
+  verbs:
+  - get

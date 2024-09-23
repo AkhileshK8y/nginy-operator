@@ -1,0 +1,9 @@
+# Use the 'create api' subcommand to add watches to this file.
+- group: demo.example.com
+  version: v1alpha1
+  kind: Nginy
+  chart: helm-charts/nginy
+  selector:
+    matchLabels:
+      syncMy: devOperator
+#+kubebuilder:scaffold:watch

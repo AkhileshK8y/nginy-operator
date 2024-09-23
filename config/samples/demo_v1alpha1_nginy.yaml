@@ -1,0 +1,10 @@
+apiVersion: demo.example.com/v1alpha1
+kind: Nginy
+metadata:
+  name: nginy-sample
+  namespace: achilleus
+spec:
+  replicaCount: 3
+
+  
+  
